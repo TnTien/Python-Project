@@ -28,11 +28,13 @@ def ask_quit(self):
 
 #   Grabs the text and update HTML
 def take_input(self):
+    #   Stores the text from entry for name of HTML file
+    file = self.lbl_newPage.get()
     #   Stores the text in the textbox
     take = self.msgEntry.get("1.0", END)
     #   Calls the function from pageGenerator and updates the text
-    pageGenerator.createPage(self, take)
-    print(take)
+    pageGenerator.createPage(self,file,take)
+    print(file)
 
 #   Clears the text box
 def clear(self):

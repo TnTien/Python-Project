@@ -3,10 +3,10 @@ import pageGenerator_func
 
 #   Creates new HTML page called test.html if one does not exist.
 #   If it exists, will update the body
-def createPage(self, newText):
+def createPage(self, fileName, newText):
 
     #   Opens up text file and will be able to read and write
-    f = open('test.html', 'w')
+    f = open('{}.html'.format(fileName), 'w')
 
     #   HTML. Text will update base on 'newText'
     message = """<html>
@@ -23,7 +23,7 @@ def createPage(self, newText):
     f.close()
 
     #   Will open html file in browser
-    webbrowser.open_new('test.html')
+    webbrowser.open_new('{}.html'.format(fileName))
     
 if __name__ == "__main__":
     pass

@@ -10,11 +10,11 @@ class ParentWindow(Frame):
 
         self.master = master
         #   Size of window of the program
-        self.master.minsize(300, 250)
-        self.master.maxsize(300, 250)
+        self.master.minsize(400, 325)
+        self.master.maxsize(400, 325)
 
         #   Will center the window when program first opens
-        pageGenerator_func.center_window(self, 300, 250)
+        pageGenerator_func.center_window(self, 400, 325)
 
         #   Message box to confirm to quit program when 'X' is clicked
         self.master.protocol("WM_DELETE_WINDOW", lambda: pageGenerator_func.ask_quit(self))
