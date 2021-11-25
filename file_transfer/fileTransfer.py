@@ -20,11 +20,14 @@ def transfer(self):
 
 
     for i in files:
+        
         #   Get the times created and modified and having it displayed in a specific format
         #ti_c = os.path.getctime(source+i)
-        ti_m = os.path.getmtime(source+'/{}'.format(i))
         #c_ti = time.ctime(ti_c)
         #m_ti = time.ctime(ti_m)
+        
+        #   Grabs the time of each individual file
+        ti_m = os.path.getmtime(source+'/{}'.format(i))
 
         #   Get last modified date and today's date
         dateModified = datetime.datetime.fromtimestamp(ti_m)
