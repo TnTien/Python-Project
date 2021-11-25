@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myDog"></p>
+    <p id="dogMy"></p>
+    <p id="dogAge"></p>
+
+    <p id="red" ondblclick="redText()">This text will turn red when double clicked.</p>
+
+    <script>
+        var dog = {name: "Corki", breed: "Corgi", color: "Tri"};
+
+        var JSONstring = JSON.stringify(dog);
+        document.getElementById("myDog").innerHTML = JSONstring;
+
+        var dogString = JSON.parse(JSONstring);
+        document.getElementById("dogMy").innerHTML = dogString.name + dogString.breed + dogString.color;
+
+        localStorage.setItem("age", "4");
+        document.getElementById("dogAge").innerHTML = localStorage.getItem("age");
+
+        function redText() {
+            document.getElementById("red").style.color = "red";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.container {
+    background-color: crimson;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+.column1 {
+    order: 1;
+}
+.column2 {
+    order: 2;
+}
+
+.blue {
+    background-color: blue;
+    height: 100px;
+}
+
+.green {
+    background-color: green;
+    height: 100px
+}
+
+
+@media screen and (min-width: 576px) {
+    .column {
+        flex: 1;
+    } 
+    .column2 {
+        order: -1;
+    }
+}
